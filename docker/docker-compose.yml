@@ -1,0 +1,11 @@
+services:
+  novnc_server:
+    image: whoatemyapplepie/novnc_server:0.0.0
+    build:
+      context: dockerfile_devenv
+    ports:
+      - 8080:8080
+    volumes:
+      - ../src:/work
+    working_dir: /work
+    tty: true

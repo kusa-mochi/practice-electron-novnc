@@ -3,9 +3,13 @@ services:
     image: whoatemyapplepie/novnc_server:0.0.0
     build:
       context: dockerfile_devenv
+    container_name: novnc_server
     ports:
       - 8080:8080
     volumes:
       - ../src:/work
+    environment:
+      - DISPLAY_WIDTH=1600
+      - DISPLAY_HEIGHT=968
     working_dir: /work
     tty: true

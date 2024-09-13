@@ -7,9 +7,9 @@ services:
     ports:
       - 8080:8080
     volumes:
-      - ../src:/work
+      - ../src:/project
     environment:
       - DISPLAY_WIDTH=1600
       - DISPLAY_HEIGHT=968
-    working_dir: /work
+    working_dir: /project
     tty: true
